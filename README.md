@@ -17,53 +17,56 @@ Visualização com Matplotlib e Seaborn
 
 # 📊 Etapas do Projeto  
 1. Entendimento e Coleta dos Dados  
-  Conexão com banco de dados SQLite  
+        Conexão com banco de dados SQLite  
 
-  Leitura da tabela Churn  
+        Leitura da tabela Churn  
 
-  Verificação de duplicatas e valores ausentes  
+        Verificação de duplicatas e valores ausentes  
 
 2. Análise Exploratória de Dados (EDA)  
-  Análise de distribuições com histograma (usando regra de Freedman-Diaconis)  
+        Análise de distribuições com histograma (usando regra de Freedman-Diaconis)  
 
-  Verificação de assimetrias  
+       Verificação de assimetrias  
 
 2.1 Análises estatísticas:  
+      Teste ne normalidade com o teste de D'Agostino Pearson
+      
+      Teste de Mann-Whitney  
 
-  Teste de Mann-Whitney  
+      Qui-quadrado  
 
-  V de Cramer  
+      V de Cramer  
 
-  Correlação de Spearman  
+      Correlação de Spearman  
 
 3. Pré-processamento  
-Conversão de colunas numéricas e categóricas  
+      Conversão de colunas numéricas e categóricas  
 
-Codificação com OneHotEncoder  
+      Codificação com OneHotEncoder  
 
-Padronização com StandardScaler  
+      Padronização com StandardScaler  
 
-Balanceamento com SMOTE para tratar desbalanceamento entre classes  
+      Balanceamento com SMOTE para tratar desbalanceamento entre classes  
 
 4. Modelagem  
-Separação entre treino e teste  
+      Separação entre treino e teste  
 
 4.1 Treinamento dos seguintes modelos:  
 
-  Regressão Logística  
+      Regressão Logística  
 
-  XGBoost Classifier  
+      XGBoost Classifier  
 
-Busca de hiperparâmetros com GridSearchCV  
+      Busca de hiperparâmetros com GridSearchCV  
 
 5. Avaliação  
-Matriz de confusão  
+      Matriz de confusão  
 
-Métricas: Precisão, Recall, F1-Score  
+      Métricas: Precisão, Recall, F1-Score  
 
-AUC-ROC  
+      AUC-ROC  
 
-Curva Precision-Recall  
+      Curva Precision-Recall  
 
 # 📌 Principais Resultados  
 Modelos foram capazes de identificar clientes propensos ao churn com boa performance.  
@@ -74,7 +77,11 @@ O balanceamento com SMOTE ajudou a melhorar significativamente o recall, bem com
 
 # 📁 Arquivos  
 churn.ipynb: Notebook Jupyter com toda a análise e trabalho de machine learning    
-dataset.csv: Conjunto de dados original (Kaggle)  
+
+dataset.csv: Conjunto de dados original (Kaggle) 
+
 churn.db: Banco de dados  
-schema.sql: Esquema do banco de dados  
+
+schema.sql: Esquema do banco de dados 
+
 README.md: Este arquivo  
